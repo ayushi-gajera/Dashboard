@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="scss/main.css" />
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <!-- icons -->
+      <div class="icons">
+        <div class="logo">
+          <img src="/images/logo.jpg">
+        </div>
+
+        <div>
+          <div class="home">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <br>
+          <ul>
+            <li><i class="fa-solid fa-user-group"></i></li>
+            <li><i class="fa-regular fa-calendar-days"></i></li>
+            <li><i class="fa-solid fa-envelope-circle-check"></i></li>
+            <li><i class="fa-regular fa-clock"></i></li>
+            <li><i class="fa-regular fa-comment"></i></li>
+          </ul>
+        </div>
+        <div class="queries">
+          <i class="fa-solid fa-question"></i>
+        </div>
+      </div>
+
+      <!-- functions -->
+      <div>
+        <aside class="function-container">
+
+          <!-- function Section -->
+
+          <div class="heading">
+            <h1>Ziferblat:</h1>
+            <p class="para">Teamwork & time management</p>
+          </div>
+
+          <div>
+            <div class="function-row">
+              <p class="function-header" onclick="togglefunction('teamfunction', this)">
+                Team <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+              </p>
+              <div id="teamfunction" class="function-content">
+                <li><a href="#">All Teams</a></li>
+                <li><a href="#">New Member(2)</a></li>
+              </div>
+            </div>
+
+            <div class="function-row">
+              <p class="function-header" onclick="togglefunction('projectfunction', this)">
+                Projects <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+              </p>
+              <div id="projectfunction" class="function-content">
+                <li><a href="#">All projects (4)</a></li>
+                <li><a href="#">Design system</a></li>
+                <li><a href="#">Make unique design</a></li>
+                <li><a href="#">User Flow</a></li>
+                <li><a href="#">UX research</a></li>
+                <li><a href="#">Add new project</a></li>
+              </div>
+            </div>
+
+            <div class="function-row">
+              <p class="function-header" onclick="togglefunction('taskfunction', this)">
+                Tasks <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+              </p>
+              <div id="taskfunction" class="function-content">
+                <li><a href="#">All tasks (3)</a></li>
+                <li><a href="#">New (1)</a></li>
+                <li><a href="#">In progress (1)</a></li>
+                <li><a href="#">Done (1)</a></li>
+                <li><a href="#">Add new task</a></li>
+              </div>
+            </div>
+
+            <div class="function-row">
+              <p class="function-header" onclick="togglefunction('remfunction', this)">
+                Reminders <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+              </p>
+              <div id="remfunction" class="function-content">
+                <li><a href="#">All Reminders</a></li>
+                <li><a href="#">New (2)</a></li>
+                <li><a href="#">Done</a></li>
+              </div>
+
+              <div class="function-row">
+                <p class="function-header" onclick="togglefunction('msgfunction', this)">
+                  Messenger <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </p>
+                <div id="msgfunction" class="function-content">
+                  <li><a href="#">All Messages</a></li>
+                  <li><a href="#">New (1)</a></li>
+                  <li><a href="#">Done</a></li>
+                </div>
+              </div>
+            </div>
+        </aside>
+
+      </div>
+
+    </aside>
+  </div>
+  <script>
+    function togglefunction(functionId, header) {
+      const functionContent = document.getElementById(functionId);
+      const arrow = header.querySelector('.arrow');
+
+      if (functionContent.style.display === "block") {
+        functionContent.style.display = "none";
+        arrow.classList.remove('expanded');
+      } else {
+        functionContent.style.display = "block";
+        arrow.classList.add('expanded');
+      }
+    }
+  </script>
+</body>
+
+</html>

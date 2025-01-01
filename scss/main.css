@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #F2ECE2;
+}
+
+.sidebar {
+  display: flex;
+  gap: 1rem;
+  max-width: 18rem;
+}
+
+.para {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  height: 5rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.icons {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  font-size: 1.3rem;
+  border-radius: 1.2rem 0rem 0rem 1.2rem;
+}
+
+.icons ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  color: #333;
+}
+
+.icons ul li {
+  cursor: pointer;
+}
+
+.icons ul li:hover {
+  color: black;
+}
+
+.icons .home {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #F2ECE2;
+  color: black;
+}
+
+.queries {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* function Section */
+.function-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.function-header {
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.arrow {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.expanded {
+  transform: rotate(90deg);
+}
+
+.function-content {
+  margin-bottom: 0.5rem;
+  display: none;
+  padding: 0rem 1.5rem;
+  list-style: none;
+}
+
+.function-content li a {
+  font-size: 0.8rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.function-content li {
+  padding: 0.2rem;
+}
+
+.container {
+  max-width: 85%;
+  margin: 5rem auto;
+  display: flex;
+  border-radius: 2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}/*# sourceMappingURL=main.css.map */
