@@ -1,12 +1,48 @@
+.w3-teal {
+    display: none;
+}
+.fun {
+    display: none;
+}
+
+@include respond(tab-mini) {
+    .fun {
+        display: block;
+    }
+    .w3-teal {
+        display: block;
+    }
+    .fun1 {
+        display: none;
+    }
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+}
+
 .sidebar {
     display: flex;
     gap: 1rem;
-    max-width: 18rem;
 }
 
 .para {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-top: 0.2rem;
+
+    @include respond(tab-land) {
+        font-size: 0.6rem;
+    }
+}
+
+.para1 {
+    font-size: 0.7rem;
+    margin-top: 0.2rem;
+
+    @include respond(tab-land) {
+        font-size: 0.6rem;
+    }
 }
 
 .logo {
@@ -25,7 +61,6 @@
     flex-direction: column;
     gap: 8rem;
     font-size: 1.3rem;
-    border-radius: 1.2rem 0rem 0rem 1.2rem;
 }
 
 .icons ul {
@@ -64,12 +99,14 @@
     border-radius: 50%;
     color: white;
     margin-bottom: 1rem;
+    font-size: 0.8rem;
 }
 
 /* function Section */
 
 .function-container {
-    margin-top: 1rem;
+    margin-left: -2rem;
+    padding-right: 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -85,6 +122,20 @@
     font-weight: 700;
 }
 
+.function1-header {
+    cursor: pointer;
+    min-width: 12rem;
+    font-size: 0.85rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+
+    @include respond(big-desktop) {
+        min-width: 20rem;
+    }
+}
 .arrow {
     font-size: 16px;
     transition: transform 0.3s ease;
@@ -108,5 +159,50 @@
 }
 
 .function-content li {
+    padding: 0.2rem;
+}
+
+/* function Section */
+
+.function1-container {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.function1-header {
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+.arrow1 {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.arrow.expanded {
+    transform: rotate(90deg);
+}
+
+.function1-content {
+    margin-bottom: 0.5rem;
+    display: none;
+    padding: 0rem 1.5rem;
+    list-style: none;
+}
+
+.function1-content li a {
+    font-size: 0.8rem;
+    color:#333;
+    text-decoration: none;
+}
+
+.function1-content li {
     padding: 0.2rem;
 }

@@ -17,11 +17,14 @@
       <!-- icons -->
       <div class="icons">
         <div class="logo">
+          <div class="w3-teal">
+            <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+          </div>
           <img src="/images/logo.jpg">
         </div>
 
         <div>
-          <div class="home">
+          <div class="home" id="asideToggle">
             <i class="fa-solid fa-house"></i>
           </div>
           <br>
@@ -39,62 +42,70 @@
       </div>
 
       <!-- functions -->
-      <div>
-        <aside class="function-container">
 
-          <!-- function Section -->
+      <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large"
+          onclick="w3_close()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close &times;</button><br>
+        <div class="fun" id="main">
+          <aside class="function-container">
 
-          <div class="heading">
-            <h1>Ziferblat:</h1>
-            <p class="para">Teamwork & time management</p>
-          </div>
+            <!-- function Section -->
 
-          <div>
-            <div class="function-row">
-              <p class="function-header" onclick="togglefunction('teamfunction', this)">
-                Team <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
-              </p>
-              <div id="teamfunction" class="function-content">
-                <li><a href="#">All Teams</a></li>
-                <li><a href="#">New Member(2)</a></li>
-              </div>
+            <div class="heading">
+              <h1>Ziferblat:</h1>
+              <p class="para">Teamwork & time management</p>
             </div>
 
-            <div class="function-row">
-              <p class="function-header" onclick="togglefunction('projectfunction', this)">
-                Projects <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
-              </p>
-              <div id="projectfunction" class="function-content">
-                <li><a href="#">All projects (4)</a></li>
-                <li><a href="#">Design system</a></li>
-                <li><a href="#">Make unique design</a></li>
-                <li><a href="#">User Flow</a></li>
-                <li><a href="#">UX research</a></li>
-                <li><a href="#">Add new project</a></li>
+            <div class="aside-items" id="asideItems">
+              <div class="function-row">
+                <p class="function-header" onclick="togglefunction('teamfunction', this)">
+                  Team
+                  <span class="arrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                  </span>
+                </p>
+                <div id="teamfunction" class="function-content">
+                  <li><a href="#">All Teams</a></li>
+                  <li><a href="#">New Member(2)</a></li>
+                </div>
               </div>
-            </div>
 
-            <div class="function-row">
-              <p class="function-header" onclick="togglefunction('taskfunction', this)">
-                Tasks <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
-              </p>
-              <div id="taskfunction" class="function-content">
-                <li><a href="#">All tasks (3)</a></li>
-                <li><a href="#">New (1)</a></li>
-                <li><a href="#">In progress (1)</a></li>
-                <li><a href="#">Done (1)</a></li>
-                <li><a href="#">Add new task</a></li>
+              <div class="function-row">
+                <p class="function-header" onclick="togglefunction('projectfunction', this)">
+                  Projects <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </p>
+                <div id="projectfunction" class="function-content">
+                  <li><a href="#">All projects (4)</a></li>
+                  <li><a href="#">Design system</a></li>
+                  <li><a href="#">Make design</a></li>
+                  <li><a href="#">User Flow</a></li>
+                  <li><a href="#">UX research</a></li>
+                  <li><a href="#">Add new project</a></li>
+                </div>
               </div>
-            </div>
 
-            <div class="function-row">
-              <p class="function-header" onclick="togglefunction('remfunction', this)">
-                Reminders <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
-              </p>
-              <div id="remfunction" class="function-content">
-                <li><a href="#">All Reminders</a></li>
-                <li><a href="#">New (2)</a></li>
-                <li><a href="#">Done</a></li>
+              <div class="function-row">
+                <p class="function-header" onclick="togglefunction('taskfunction', this)">
+                  Tasks <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </p>
+                <div id="taskfunction" class="function-content">
+                  <li><a href="#">All tasks (3)</a></li>
+                  <li><a href="#">New (1)</a></li>
+                  <li><a href="#">In progress (1)</a></li>
+                  <li><a href="#">Done (1)</a></li>
+                  <li><a href="#">Add new task</a></li>
+                </div>
+              </div>
+
+              <div class="function-row">
+                <p class="function-header" onclick="togglefunction('remfunction', this)">
+                  Reminders <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+                </p>
+                <div id="remfunction" class="function-content">
+                  <li><a href="#">All Reminders</a></li>
+                  <li><a href="#">New (2)</a></li>
+                  <li><a href="#">Done</a></li>
+                </div>
               </div>
 
               <div class="function-row">
@@ -108,11 +119,297 @@
                 </div>
               </div>
             </div>
-        </aside>
-
+          </aside>
+        </div>
       </div>
 
+      <div class="fun1">
+        <aside class="function1-container">
+
+          <!-- function Section -->
+
+          <div class="heading1">
+            <h4>Ziferblat:</h4>
+            <p class="para1">Teamwork & time management</p>
+          </div>
+
+          <div class="aside-items" id="asideItems">
+            <div class="function1-row">
+              <p class="function1-header" onclick="togglefunction('teamfunction1', this)">
+                Team
+                <span class="arrow">
+                  <i class="fa-solid fa-angle-right"></i>
+                </span>
+              </p>
+              <div id="teamfunction1" class="function1-content">
+                <li><a href="#">All Teams</a></li>
+                <li><a href="#">New Member(2)</a></li>
+              </div>
+            </div>
+
+            <div class="function1-row">
+              <p class="function1-header" onclick="togglefunction('projectfunction1', this)">
+                Projects <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+              </p>
+              <div id="projectfunction1" class="function1-content">
+                <li><a href="#">All projects (4)</a></li>
+                <li><a href="#">Design system</a></li>
+                <li><a href="#">Make design</a></li>
+                <li><a href="#">User Flow</a></li>
+                <li><a href="#">UX research</a></li>
+                <li><a href="#">Add new project</a></li>
+              </div>
+            </div>
+
+            <div class="function1-row">
+              <p class="function1-header" onclick="togglefunction('taskfunction1', this)">
+                Tasks <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+              </p>
+              <div id="taskfunction1" class="function1-content">
+                <li><a href="#">All tasks (3)</a></li>
+                <li><a href="#">New (1)</a></li>
+                <li><a href="#">In progress (1)</a></li>
+                <li><a href="#">Done (1)</a></li>
+                <li><a href="#">Add new task</a></li>
+              </div>
+            </div>
+
+            <div class="function1-row">
+              <p class="function1-header" onclick="togglefunction('remfunction1', this)">
+                Reminders <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+              </p>
+              <div id="remfunction1" class="function1-content">
+                <li><a href="#">All Reminders</a></li>
+                <li><a href="#">New (2)</a></li>
+                <li><a href="#">Done</a></li>
+              </div>
+            </div>
+
+            <div class="function1-row">
+              <p class="function1-header" onclick="togglefunction('msgfunction1', this)">
+                Messenger <span class="arrow"><i class="fa-solid fa-angle-right"></i></span>
+              </p>
+              <div id="msgfunction1" class="function1-content">
+                <li><a href="#">All Messages</a></li>
+                <li><a href="#">New (1)</a></li>
+                <li><a href="#">Done</a></li>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
     </aside>
+
+    <!-- Middle Part -->
+
+    <div class="mid_part">
+      <!-- nav-search -->
+      <div class="nav_search">
+        <h3>Today, 4 October</h3>
+        <br>
+        <div class="nav__searchbar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Searching for..." class="nav__searchbar__search">
+        </div>
+      </div>
+
+      <!-- cards -->
+      <br><br>
+      <div class="nav">
+        <h4>Recent projects</h4>
+        <a href="#">View all</a>
+      </div>
+      <br>
+      <div class="project-card">
+        <div class="project-card__1">
+          <div class="project-card__1__nav">
+            <div class="project-card__1__footer">
+              <p class="project-card__2__footer__image-add__addBtn2">+3</p>
+              <div class="project-card__1__footer__image-add">
+                <img src="./person1.jpg" alt="img" class="project-card__1__footer__image-add__img22">
+                <img src="./person2.jpg" alt="img" class="project-card__1__footer__image-add__img222">
+              </div>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+
+          <div class="project-card__1__header">
+            <h4>Design System</h4>
+            <p>Deadline: 18 October</p>
+          </div>
+
+          <div class="project-card__1__progress">
+            <p>84 hours / 40%</p>
+            <div class="project-card__1__progress-bar">
+              <div class="project-card__1__progress-bar-fill" style="width: 40%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card__2">
+          <div class="project-card__1__nav">
+            <div class="project-card__1__footer">
+              <p class="project-card__2__footer__image-add__addBtn">+2</p>
+              <div class="project-card__1__footer__image-add">
+                <img src="./person3.jpg" alt="img" class="project-card__1__footer__image-add__img111">
+                <img src="./person4.jpg" alt="img" class="project-card__1__footer__image-add__img21">
+              </div>
+            </div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </div>
+
+          <div class="project-card__1__header">
+            <h4>Make page</h4>
+            <p>Deadline: 30 October</p>
+          </div>
+
+          <div class="project-card__2__progress">
+            <p>108 hours / 75%</p>
+            <div class="project-card__2__progress-bar">
+              <div class="project-card__2__progress-bar-fill" style="width: 75%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <div>
+        <h4 class="reminders_heading">Reminders</h4>
+        <br>
+        <div class="reminder">
+          <p>Tomorrow, 16:00-18:00</p>
+          <div class="reminder__middle">
+            <h4>Discussion of the interm results of the project</h4>
+            <button>Set reminder</button>
+          </div>
+          <br>
+          <div class="dot">
+            <h1><span>•</span> • •</h1>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="end_part">
+      <div class="dots">
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+
+      <div class="profile_section">
+        <div class="add_btn">
+          <button>Add project</button>
+        </div>
+
+        <div class="profile">
+          <i class="fa-regular fa-bell"><span class="dot">•</span></i>
+          <div class="user_profile">
+            <img src="./person2.jpg" class="profile__img">
+            <div>
+              <p class="user">User</p>
+              <p class="name">Maria</p>
+            </div>
+
+          </div>
+          <i class="angle fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div>
+        <h3>Team members</h3>
+
+        <div class="person">
+          <img src="./person1.jpg" class="profile__image">
+          <img src="./person2.jpg" class="profile__image">
+          <p class="profile__name">AA</p>
+          <img src="./person3.jpg" class="profile__image">
+          <img src="./person4.jpg" class="profile__image">
+          <p class="profile__name_plus">+</p>
+        </div>
+      </div>
+
+      <div class="info">
+        <div>
+          <p class="user">Project time</p>
+          <h5>18 hours</h5>
+        </div>
+
+        <div>
+          <p class="user">Tasks in progress</p>
+          <h5>2</h5>
+        </div>
+
+        <div>
+          <p class="user">Finished task</p>
+          <h5>16</h5>
+        </div>
+      </div>
+
+      <div class="tasks">
+        <div class="nav">
+          <h4>Daily tasks(3)</h4>
+          <a href="#">Edit</a>
+        </div>
+
+        <!-- cards -->
+        <br>
+        <div class="cards">
+          <div class="card1">
+            <p class="add_new">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add New</p>
+            <p class="plus_icon">+&nbsp;&nbsp;&nbsp;</p>
+          </div>
+
+          <div class="card">
+            <div class="corner">
+              <p class="point">•</p>&nbsp;
+              <p>New</p>&nbsp;&nbsp;&nbsp;
+              <i class="fa-regular fa-square"></i>
+            </div>
+            <div class="stroke1">
+              <p class="paragraph1">Change color palette to more bright</p>
+              <svg class="wave" width="100%" height="100" viewBox="-100 10 500 100" preserveAspectRatio="none">
+                <path d="M0,100 C150,110 300,-30, 500,60" fill="none" stroke="#F4A787" stroke-width="2" />
+                <path d="M10,110 C150,130 180,30 450,80" fill="none" stroke="#F4A787" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="corner">
+              <p class="point1">•</p>&nbsp;
+              <p>In progress</p>&nbsp;&nbsp;&nbsp;
+              <i class="fa-regular fa-square"></i>
+            </div>
+            <p class="paragraph">Make prototype for mobile version</p>
+
+            <div class="rectangles">
+              <div class="rec_1"></div>
+              <div class="rec_2"></div>
+              <div class="rec_3"></div>
+            </div>
+
+          </div>
+
+          <div class="card4">
+            <div class="corner">
+              <p class="point2">•</p>&nbsp;
+              <p>Done</p>&nbsp;&nbsp;&nbsp;
+              <i class="angle1 fa-solid fa-angle-down"></i>
+            </div>
+
+            <div class="stroke">
+              <p class="paragraph">Make fixes in homepage</p>
+              <div class="stroke-circle1"></div>
+              <div class="stroke-circle2"></div>
+              <div class="stroke-circle3"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
   <script>
     function togglefunction(functionId, header) {
@@ -126,6 +423,23 @@
         functionContent.style.display = "block";
         arrow.classList.add('expanded');
       }
+    }
+
+    document.getElementById("asideToggle").addEventListener("click", function () {
+      const asideItems = document.getElementById("asideItems");
+      asideItems.classList.toggle("display");
+    });
+
+    function w3_open() {
+      document.getElementById("main").style.marginLeft = "25%";
+      document.getElementById("mySidebar").style.width = "25%";
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+      document.getElementById("main").style.marginLeft = "0%";
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("openNav").style.display = "inline-block";
     }
   </script>
 </body>

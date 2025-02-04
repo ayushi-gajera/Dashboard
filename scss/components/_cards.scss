@@ -1,0 +1,367 @@
+.mid_part {
+  background-color: rgb(252, 252, 252);
+  padding: 1.6rem 2rem;
+
+  @include respond(tablet) {
+    padding: 1rem 1rem;
+  }
+}
+
+.nav__searchbar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(252, 252, 252);
+  border-radius: 2rem;
+  padding: 0.5rem 1.2rem;
+  color: rgb(128, 128, 128, 0.4);
+  border: 1px solid rgb(175, 175, 175, 0.4);
+
+  &__search {
+    background-color: rgb(252, 252, 252);
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    width: 9rem;
+  }
+  ::before {
+    margin-right: 0.7rem;
+  }
+  ::placeholder {
+    color: rgb(128, 128, 128, 0.4);
+    font-size: 0.9rem;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.09rem;
+
+  @include respond(phone) {
+    font-size: 0.92rem;
+  }
+}
+
+.reminders_heading {
+  @include respond(phone) {
+    font-size: 0.92rem;
+  }
+}
+.nav a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: $color-orange;
+}
+
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+
+  @include respond(tab-port) {
+    gap: 1rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.project-card__1 {
+  width: 14.2rem;
+  background-color: #fcbda3;
+  border-radius: 1rem;
+  min-height: 19rem;
+  padding: 1.8rem 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+  @include respond(tab-port) {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: rgb(108, 107, 107);
+
+    @include respond(tab-port) {
+      text-align: center;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+    :last-child {
+      font-size: 1.2rem;
+      color: black;
+      cursor: pointer;
+    }
+  }
+
+  &__header {
+    margin-top: 2rem;
+    line-height: 1.4rem;
+
+    p {
+      margin-top: 0.8rem;
+      margin-bottom: 1rem;
+      font-size: 0.7rem;
+
+      @include respond(tab-land) {
+        font-size: 0.8rem;
+      }
+      @include respond(tab-port) {
+        font-size: 0.95rem;
+      }
+    }
+  }
+
+  &__progress {
+    margin-top: 6.1rem;
+    p {
+      font-size: 0.7rem;
+      padding-bottom: 0.6rem;
+    }
+
+    &-bar {
+      width: 100%;
+      height: 0.3rem;
+      background-color: rgb(207, 166, 166, 0.5);
+      border-radius: 2rem;
+
+      &-fill {
+        height: 100%;
+        background-color: black;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__image-add {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &__addBtn {
+        font-size: 0.5rem;
+        padding: 0.5rem;
+        background-color: #fcbda3;
+        border-radius: 50%;
+        border: 1px solid black;
+        cursor: pointer;
+
+        @include respond(tab-port) {
+          font-size: 0.7rem;
+          padding: 0.4rem;
+        }
+      }
+
+      &__img {
+        cursor: pointer;
+        object-fit: cover;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        position: relative;
+        right: 0.9rem;
+        border: 2px solid #fcbda3;
+        z-index: 1;
+      }
+
+      &__img22 {
+        cursor: pointer;
+        object-fit: cover;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        position: relative;
+        right: 0.9rem;
+        border: 2px solid #fcbda3;
+        z-index: 1;
+      }
+
+      &__img2 {
+        cursor: pointer;
+        object-fit: cover;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        position: relative;
+        right: 1.8rem;
+        border: 2px solid #fcbda3;
+      }
+
+      &__img222 {
+        cursor: pointer;
+        object-fit: cover;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        position: relative;
+        right: 1.8rem;
+        border: 2px solid #fcbda3;
+      }
+
+      &__img111 {
+        cursor: pointer;
+        object-fit: cover;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        position: relative;
+        right: 0.9rem;
+        border: 2px solid #fce5bc;
+        z-index: 1;
+      }
+
+      &__img21 {
+        cursor: pointer;
+        object-fit: cover;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        position: relative;
+        right: 1.8rem;
+        border: 2px solid #fce5bc;
+      }
+    }
+
+    &__btn {
+      background-color: rgb(222, 240, 247);
+      border: none;
+      padding: 0.7rem;
+      border-radius: 2rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(188, 222, 236);
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+.project-card__2 {
+  background-color: #fce5bc;
+  width: 14.2rem;
+  border-radius: 1rem;
+  min-height: 19rem;
+  padding: 1.8rem 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+  @include respond(tab-port) {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  &__progress {
+    margin-top: 6.1rem;
+    p {
+      font-size: 0.7rem;
+      padding-bottom: 0.6rem;
+    }
+
+    &-bar {
+      width: 100%;
+      height: 0.3rem;
+      background-color: #decaa5;
+      border-radius: 2rem;
+
+      &-fill {
+        height: 100%;
+        background-color: black;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  &__footer__image-add__addBtn {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    color: black;
+    background-color: #fce5bc;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    border: 1px solid black;
+  }
+
+  &__footer__image-add__addBtn2 {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    border: 2px solid #fcbda3;
+  }
+
+  &__footer__btn {
+    border: none;
+    padding: 0.7rem;
+    border-radius: 2rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: rgb(235, 123, 11);
+    cursor: pointer;
+
+    &:hover {
+      transition: all 0.5s;
+    }
+  }
+}
+
+.reminder {
+  border: 1px solid rgb(143, 140, 140, 0.3);
+  padding: 1.2rem 1.5rem;
+  border-radius: 1.5rem;
+
+  &__middle {
+    margin-top: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 0.9rem;
+      max-width: 15rem;
+    }
+
+    button {
+      padding: 0.8rem 1.8rem;
+      background-color: rgb(252, 252, 252);
+      border: 2px dashed rgb(246, 217, 163);
+      border-radius: 20rem;
+      cursor: pointer;
+    }
+  }
+}
+.dot {
+  text-align: center;
+  margin-bottom: -0.7rem;
+}
+.reminder p {
+  font-size: 0.7rem;
+  color: rgb(113, 112, 112);
+}
+
+.reminder h1 {
+  font-size: 1.1rem;
+  color: rgb(246, 217, 163);
+}
+
+.reminder h1 span {
+  color: rgb(245, 176, 47);
+}

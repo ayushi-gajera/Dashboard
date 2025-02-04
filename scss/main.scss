@@ -1,9 +1,12 @@
 @import "abstracts/variables";
-// @import "abstracts/mixins";
+@import "abstracts/mixins";
 
 @import "base/base";
-@import "base/typography";
+
+@import "components/_cards";
+@import "components/end_part";
 
 @import "layouts/sidebar";
+@import "layouts/fun";
 
 @import "pages/home";
